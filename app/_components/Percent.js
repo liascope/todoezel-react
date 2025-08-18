@@ -29,7 +29,7 @@ export default function Percent({ arr }) {
   return (
     <span
   className="p-9 rounded-full border-8 flex items-center justify-center 
-             w-16 h-16 sm:w-24 sm:h-24 
+             w-8 h-8 sm:w-24 sm:h-24 
              shadow-[0_2px_5px_rgba(0,0,0,0.5)] text-lg sm:text-xl font-semibold 
              shadow-text transition-all duration-300"
   style={{

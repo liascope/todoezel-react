@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
 import Button from "./Button";
 import ButtonQuery from "./ButtonQuery"
@@ -30,13 +29,17 @@ return <>    <div className="max-w-screen sm:px-5 flex flex-col items-center mx-
      <div className="w-full flex items-center flex-row"><ButtonQuery tasks={todoes} setTasks={setTodoes} placeholder={todo ? 'Add Todoes / Notes..' : 'Add Shop Items..'}>
               </ButtonQuery>
 <Button onClick={() => { if (window.confirm("Are you sure you want to delete all checked items?")) {setTodoes((prev) => prev.filter((item) => !item.done));}}} 
-disabledOnDefault={!maxReached} textSize="text-xs" ><Image
-                       src={`/trash${maxReached ? 'On' : 'Off'}.png`}
-                      alt="Delete"
-                      width={28}
-                      height={28}
-                      className="mx-auto invert"
-                    /> </Button> </div>
+disabledOnDefault={!maxReached} textSize="text-xs" >
+ <svg className="w-[28px] h-[28px]" viewBox="0 0 55 55" xmlns="http://www.w3.org/2000/svg"> <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
+     <polyline points="2,9 18,9 22,2 30,2 34,9 51,9 9,9"></polyline>
+   <polyline points="3,15 50,15 45,15 43,26"></polyline>
+   <polyline points="8,15 14,50 39,50"></polyline>
+       <circle  stroke={`${maxReached ? 'white' : 'gray'}`}  cx="40" cy="38" r="11" />
+       <polyline stroke={`${maxReached ? 'white' : 'gray'}`}   points="35,38 39,42 45,34"></polyline>  
+       <line x1="22" y1="42" x2="22" y2="25"/>
+       <line x1="31" y1="31" x2="31" y2="25"/>
+  </g> 
+</svg>   </Button> </div>
             </div>
             
              {todoes.length === 0 ? (

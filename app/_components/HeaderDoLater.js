@@ -4,7 +4,6 @@ import ToggleList from "./ToggleList";
 import { useState } from "react";
 import ButtonQuery from "./ButtonQuery";
 import Button from "./Button";
-import Image from "next/image";
 import { useTodaysTasks } from "../_lib/hooks/context/TodaysProvider";
 
 export default function HeaderDoLater() {
@@ -54,13 +53,16 @@ export default function HeaderDoLater() {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <Button onClick={handleSave}>  <Image
-                    src="/save.png"
-                    alt="Save"
-                    width={28}
-                    height={28}
-                    className="mx-auto invert"
-                  /></Button>
+        <Button onClick={handleSave}><svg className="w-[28px] h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
+     <polyline points="3,3 3,50 48,50 48,15 35,3 3,3"></polyline>
+      <polyline points="35,3 35,16 16,16 16,3 29,3 29,7"></polyline>
+      <polyline points="10,50 10,30 40,30 40,50"></polyline>
+       <line x1="16" y1="45" x2="34" y2="45"/>
+         <line x1="16" y1="40" x2="34" y2="40"/>
+          <line x1="16" y1="35" x2="34" y2="35"/>
+  </g>
+</svg> </Button>
       </div>
 
       <div className="flex flex-col text-center">

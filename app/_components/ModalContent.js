@@ -2,7 +2,7 @@
 export default function ModalContent ({onClose}) {
 
   return <div className="min-w-screen min-h-screen absolute z-50 top-0 right-0 flex flex-col items-center justify-center bg-[#00000080] backdrop-blur-xl">
-  <div className="relative inset-0 w-[80vw] h-[90vh] overflow-y-scroll flex flex-col items-center justify-around border-blue-400 border-2 rounded-2xl
+  <div className="relative inset-0 w-[80vw] h-[60vh] overflow-y-scroll flex flex-col items-center justify-around border-blue-400 border-2 rounded-2xl
   "role="dialog"
       aria-modal="true" >
     <div className="sticky top-0 w-full flex flex-row justify-between items-center py-3 px-7 rounded-b-lg bg-green-400/90 backdrop-blur-3xl">

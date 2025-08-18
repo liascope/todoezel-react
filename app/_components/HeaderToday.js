@@ -41,7 +41,14 @@ const pathname = usePathname();
     <span className={`${toggle ? 'bg-blue-400/40' :'bg-amber-400/40'} mask-r-from-80% py-2 px-4 sm:text-xl font-black tracking-wide flex-1 max-w-lg truncate`}>
       {toggle ? "Todays Todoes🟢" : firstTask}
     </span>
-{todaysTask?.tasks?.length > 0 && <span className="ml-3 w-fit">{toggle ? "⮝" : `${todaysTask?.tasks?.every(task => task?.done) ? '🎉':'🟢'}⮟`}</span>}
+{todaysTask?.tasks?.length > 0 && <> <span className="ml-3 w-fit">
+  {toggle ? '' : `${todaysTask?.tasks?.every(task => task?.done) ? '🎉':'🟢'}`}
+  </span>
+    <svg className="w-[20px] h-[20px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
+  {toggle ? <polyline points="6 15 12 9 18 15" /> : <polyline points="6 9 12 15 18 9"/>}
+  </g>
+</svg></>}
   </div>
 </div>
 

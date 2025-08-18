@@ -1,12 +1,16 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import Image from 'next/image'
+
+// Icons
+import TodoIcon from './NavIcons/TodoIcon'
+import ShopIcon from './NavIcons/ShopIcon'
+import LaterIcon from './NavIcons/LaterIcon'
 
 const links = [
-  { href: '/', icon: '/todo.png', alt: 'To Do' },
-  { href: '/shop', icon: '/shop.png', alt: 'Shop' },
-  { href: '/do-later', icon: '/later.png', alt: 'Do Later' }
+  { href: '/', Icon: TodoIcon, alt: 'To Do' },
+  { href: '/shop', Icon: ShopIcon, alt: 'Shop' },
+  { href: '/do-later', Icon: LaterIcon, alt: 'Do Later' }
 ]
 
 export default function Navigation() {
@@ -18,26 +22,19 @@ export default function Navigation() {
 
   return (
     <footer className="flex flex-col fixed bottom-0 left-0 w-full text-center">
-      <nav className="flex justify-evenly shadow-[-0_2px_5px_rgba(0,0,0,0.1)] z-10 bg-green-400  transition-colors duration-300 ease-in-out  ">
-        {links.map(({ href, icon, alt }) => (
+      <nav className="flex justify-evenly shadow-[-0_2px_5px_rgba(0,0,0,0.1)] z-10 bg-green-400 transition-colors duration-300 ease-in-out">
+        {links.map(({ href, Icon, alt }) => (
           <Link
             key={href}
             href={href}
             className={`${baseStyle} ${pathname === href ? activeStyle : ''}`}
           >
-            <Image
-              src={icon}
-              alt={alt}
-              width={28}
-              height={28}
-              priority
-              className="mx-auto invert"
-            />
+            <Icon className="mx-auto w-7 h-7" aria-label={alt} />
           </Link>
         ))}
       </nav>
       <div className="backdrop-blur-2xl bg-stone-900/60">
-        <p className="my-1 text-xs tracking-widest text-transparent bg-stone-300/80 bg-clip-text shadow-2xl">
+        <p className="my-1 text-xs tracking-wide text-transparent bg-stone-300/80 bg-clip-text shadow-2xl">
           ToDoeZel App | © 2025 ZAkin. All rights reserved.
         </p>
       </div>
