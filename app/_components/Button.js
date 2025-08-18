@@ -4,7 +4,7 @@ export default function Button({ children, onClick, disabledOnDefault = false, t
     <button
       onClick={onClick}
       disabled={disabledOnDefault}
-      className={` bg-green-400 hover:bg-blue-400 py-1 transition-colors duration-300 ease-in-out rounded-md flex justify-center items-center sm:py-8 w-28
+      className={` bg-green-400 hover:bg-blue-400 py-1 transition-colors duration-300 ease-in-out rounded-md flex justify-center items-center sm:py-1 w-28
  cursor-pointer mx-1 sm:mx-2 disabled:bg-stone-700/50disabled:cursor-not-allowed ${textSize}`}
     >
       {children}
