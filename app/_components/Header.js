@@ -4,12 +4,12 @@ import { useState } from "react";
 export default function Header(){
   const [open, setOpen] = useState(false)
 
-    return <> <div onClick={() => setOpen(true)}  className="relative text-center py-1 text-xl tracking-[11px] opacity-60 text-transparent bg-stone-800 bg-clip-text shadow-[0_3px_3px_rgba(255,255,255,0.5)] cursor-pointer font-extrabold hover:bg-stone-900">
+    return <> <div onClick={() => setOpen(true)}  className="relative text-center py-3 text-xl sm:text-3xl tracking-[11px] opacity-60 text-transparent bg-clip-text [text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5)] opacity-60 bg-[#666666] text-shadow-lg cursor-pointer font-extrabold hover:bg-stone-900">
      ToDoeZel✏️
      <svg
   onClick={() => setOpen(true)}
-  className="absolute top-0 right-7 flex items-center justify-center w-[28px] h-[28px] 
-             text-gray-500 hover:text-stone-900 transition-colors duration-200"
+  className="absolute top-2 right-7 flex items-center justify-center w-[28px] h-[28px] 
+             text-gray-900/70 hover:text-stone-900 transition-colors duration-200"
   viewBox="0 0 33 33"
   xmlns="http://www.w3.org/2000/svg"
 >

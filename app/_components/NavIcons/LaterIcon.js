@@ -3,7 +3,7 @@ export default function LaterIcon({ className }) {
     <svg
       viewBox="0 0 55 55"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={className} filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))"
     >
       <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
         <polyline points="29,45 2,45 2,10 45,10 45,31" />

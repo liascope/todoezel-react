@@ -23,13 +23,13 @@ export default function RootLayout({ children }) {
   return (
   <html lang="en" className="overflow-x-hidden relative overflow-hidden">
   <body
-    className={`${delius.className} antialiased w-full h-full tracking-widest uppercase bg-stone-900/15 text-amber-50/90`}
+    className={`${delius.className} antialiased w-full h-full tracking-widest  bg-stone-900/15 text-amber-50/90`}
   >
     <BackgroundImage/>
     <Header />
     <TodaysProvider>
       <HeaderToday />
-    <main className=" sm:m-7 m-2 rounded-xl py-2 sm:py-7 bg-stone-700/40 max-h-screen text-center">
+    <main className="uppercase sm:m-7 m-2 rounded-xl py-2 sm:py-7 bg-stone-700/40 max-h-screen text-center">
         {children}
       </main>
  

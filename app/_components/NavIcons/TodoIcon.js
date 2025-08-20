@@ -3,7 +3,7 @@ export default function TodoIcon({ className }) {
     <svg
       viewBox="0 0 70 70"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={className} filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))"
     >
       <g stroke="white" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none">
         <polyline points="10,12 15,22 28,7" />

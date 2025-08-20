@@ -35,7 +35,7 @@ export default function HeaderDoLater() {
         <Link href="/saved">
           <div
             className={`w-full bg-green-400 hover:bg-blue-400 transition-colors duration-300 ease-in-out
- py-1 text-center rounded-md cursor-pointer my-3 sm:my-9 sm:py-2  `}
+ py-1 text-center rounded-md cursor-pointer my-3 sm:my-9 sm:py-2`}
           >
             SHOW SAVED TASKS 🔍
           </div>
@@ -53,7 +53,7 @@ export default function HeaderDoLater() {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <Button onClick={handleSave}><svg className="w-[28px] h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+        <Button onClick={handleSave}><svg filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))" className="w-[28px] h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
   <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
      <polyline points="3,3 3,50 48,50 48,15 35,3 3,3"></polyline>
       <polyline points="35,3 35,16 16,16 16,3 29,3 29,7"></polyline>

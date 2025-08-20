@@ -1,8 +1,8 @@
 
 export default function ModalContent ({onClose}) {
 
-  return <div className="min-w-screen min-h-screen absolute z-50 top-0 right-0 flex flex-col items-center justify-center bg-[#00000080] backdrop-blur-xl">
-  <div className="relative inset-0 w-[80vw] h-[60vh] overflow-y-scroll flex flex-col items-center justify-around border-blue-400 border-2 rounded-2xl
+  return <div className="min-w-screen min-h-screen absolute z-50 top-0 right-0 flex flex-col items-center justify-start bg-[#00000080] backdrop-blur-xl">
+  <div className="relative w-[80vw] h-[70vh] overflow-y-scroll flex flex-col items-center justify-around border-blue-400 border-2 rounded-2xl my-20
   "role="dialog"
       aria-modal="true" >
     <div className="sticky top-0 w-full flex flex-row justify-between items-center py-3 px-7 rounded-b-lg bg-green-400/90 backdrop-blur-3xl">
@@ -17,8 +17,7 @@ export default function ModalContent ({onClose}) {
     <div className=" flex flex-col items-center justify-between gap-7 my-7 px-7">
         <p>
           The app provides an innovative and independent solution for task
-          management and was created with the goal of helping users efficiently
-          organize and successfully complete their daily tasks. It combines
+          management. It combines
           flexibility, user-friendliness, and motivation to help you manage your
           tasks in a new and engaging way. It was created with attention to
           detail and a vision to give users the best overview and highest
@@ -29,9 +28,7 @@ export default function ModalContent ({onClose}) {
         The To Do page allows you to easily create random, non-date-based tasks
         and notes. Once a task is completed, you can mark it as done, and the
         progress tracker will show you how much you have accomplished. This helps
-        you stay motivated and keep track of your progress. Want to delete a
-        task? Simply click on the task and the red X will appear, allowing you
-        to remove it.
+        you stay motivated and keep track of your progress.
 
         <h3>Shop</h3>
 
@@ -44,13 +41,7 @@ export default function ModalContent ({onClose}) {
         On the Do Later page, you can set up date-based tasks that you want to
         complete later. Simply add a task and choose the date it should be done.
         Once the date arrives, your tasks will automatically appear in the Today
-        Header. You can view and mark them as complete, with the progress being
-        tracked for each task. This is a great way to measure your daily
-        productivity. Additionally, you can view all saved tasks by clicking on
-       Show all saved tasks. The last three saved tasks are visible, and any
-        tasks older than that will be automatically deleted. You can also
-        manually delete tasks from this list, ensuring they no longer appear in
-        the Today Header.
+        Header. 
 
         <h3>Show All Saved Tasks</h3>
 
@@ -60,18 +51,17 @@ export default function ModalContent ({onClose}) {
         manually delete tasks from this list, and they will be removed from both
         the app and the Today Header.
 
-        <h3>Delete</h3>
-
-        Deleting tasks or notes is straightforward and works the same way across
-        the app. Just click on the task you wish to remove, and a red X will
-        appear. Click it, and the task will be permanently deleted.
-
         <h3>Todays Tasks</h3>
 
         The Today Header gives you a clear overview of the tasks you need to
         complete today. These tasks automatically appear if you’ve set a due
         date for them on the Do Later page. You can check them off and track
-        your progress, staying motivated to finish everything you planned.
+        your progress, staying motivated to finish everything you planned for today.
+
+        <h3>Delete</h3>
+
+        Just click on the task you wish to remove, and a red X will
+        appear. Click it, and the task will be permanently deleted.
 
         <h3>Check and Progress</h3>
 

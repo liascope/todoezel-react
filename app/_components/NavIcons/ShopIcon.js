@@ -3,7 +3,7 @@ export default function ShopIcon({ className }) {
     <svg
       viewBox="0 0 69 69"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={className} filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))"
     >
       <g stroke="white" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none">
         <polyline points="6,9 13,9 14,9 23,43 60,43 68,16 18,16" />

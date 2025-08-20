@@ -2,11 +2,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-93 sm:max-h-70'}) {
+export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-93 sm:max-h-70 '}) {
   const [toggleItems, setToggleItems] = useState({});
 
   return (
-    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-scroll w-full ${maxHeight}`}>
+    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-scroll w-full pb-10 sm:pb-24 ${maxHeight}`}>
       <AnimatePresence>
         {tasks?.map((task) => (
           <motion.li  
@@ -15,7 +15,7 @@ export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, m
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
-            className="even:bg-black/30 odd:bg-black/50 text-justify mx-2 sm:mx-16 px-3 sm:px-16 sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between tracking-widest font-medium hover:bg-black/20"
+            className="even:bg-black/30 odd:bg-black/50 text-left mx-2 sm:mx-16 px-3 sm:px-16 sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between tracking-wider font-medium hover:bg-black/20"
             onClick={() =>
               setToggleItems((prev) => ({ ...prev, [task.id]: !prev[task.id] }))
             }
