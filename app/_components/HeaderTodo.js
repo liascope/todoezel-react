@@ -57,7 +57,7 @@ disabledOnDefault={!maxReached} textSize="text-xs" >
         )
       )
     }
-    maxHeight={`${todo ? 'max-h-98 sm:max-h-113 pb-10': 'max-h-120 sm:max-h-113 pb-15'} `}
+    maxHeight={`${todo ? 'max-h-98 sm:max-h-113 pb-5': 'max-h-120 sm:max-h-113 pb-10'} `}
   />
 
 )} </>

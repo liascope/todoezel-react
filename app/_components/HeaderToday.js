@@ -35,7 +35,7 @@ const pathname = usePathname();
     <div className="mt-3 sm:mt-12 sm:ml-12"><Percent arr={todaysTask?.tasks} /></div>
  
 
-  <div className={` flex items-center ${todaysTask?.length > 0 ? 'justify-center' : 'justify-between'} sm:px-20 w-[70%]`}>
+  <div className={` flex items-center ${todaysTask?.length > 0 ? 'justify-center' : 'justify-between'} mr-2 sm:px-20 w-[70%]`}>
 
     <span className={`${toggle ? 'bg-blue-400/40' :'bg-amber-400/40'} mask-r-from-80% py-2 px-4 text-xs sm:text-xl font-black tracking-wide flex-1 max-w-lg truncate`}>
       {toggle ? "Todays Todoes🟢" : firstTask}
