@@ -30,12 +30,12 @@ export default function HeaderDoLater() {
   }
 
   return (
-    <div className="max-w-screen px-5">
-      <div className=" h-fit sm:mx-36">
+    <div className="max-w-screen p-1 sm:px-5">
+      <div className=" h-fit sm:mx-36 mx-0 px-11">
         <Link href="/saved">
           <div
-            className={`w-full bg-green-400 hover:bg-blue-400 transition-colors duration-300 ease-in-out
- py-1 text-center rounded-md cursor-pointer my-3 sm:my-9 sm:py-2`}
+            className="w-full bg-green-400 hover:bg-blue-400 transition-colors duration-300 ease-in-out
+ text-center rounded-md cursor-pointer mb-2 sm:my-9 sm:py-2 py-1 text-sm sm:text-lg "
           >
             SHOW SAVED TASKS 🔍
           </div>
@@ -44,7 +44,7 @@ export default function HeaderDoLater() {
 
       <div className="flex flex-row justify-end items-center sm:mx-6">
         <input
-          className="w-full flex justify-center text-center border rounded-md px-1 py-1 sm:py-2  border-green-400 hover:border-amber-400 bg-stone-900/70 sm:ml-30"
+          className="w-full m-1 sm:my-9 p-2 text-sm sm:text-lg text-center border border-green-400 hover:border-amber-400 bg-stone-900/70 rounded-md sm:ml-5"
           placeholder="Search Date 🔍📅"
           type="text"
           onFocus={(e) => (e.target.type = 'date')}
@@ -53,7 +53,7 @@ export default function HeaderDoLater() {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <Button onClick={handleSave}><svg filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))" className="w-[28px] h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+        <Button onClick={handleSave}><svg filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))" className="w-[19px] h-[19px] sm:w-[28px] sm:h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
   <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
      <polyline points="3,3 3,50 48,50 48,15 35,3 3,3"></polyline>
       <polyline points="35,3 35,16 16,16 16,3 29,3 29,7"></polyline>

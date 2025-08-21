@@ -8,8 +8,8 @@ export default function Header(){
      ToDoeZel✏️
      <svg
   onClick={() => setOpen(true)}
-  className="absolute top-2 right-7 flex items-center justify-center w-[28px] h-[28px] 
-             text-gray-900/70 hover:text-stone-900 transition-colors duration-200"
+  className="absolute top-2 right-7 sm:right-10 flex items-center justify-center w-[28px] h-[28px] 
+             text-gray-900 hover:text-stone-900/80 transition-colors duration-200"
   viewBox="0 0 33 33"
   xmlns="http://www.w3.org/2000/svg"
 >

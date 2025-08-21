@@ -29,7 +29,7 @@ export default function Navigation() {
             href={href}
             className={`${baseStyle} ${pathname === href ? activeStyle : ''}`}
           >
-            <Icon className="mx-auto w-7 h-7" aria-label={alt} />
+            <Icon className="mx-auto w-7 h-7 sm:w-12 sm:h-12" aria-label={alt} />
           </Link>
         ))}
       </nav>

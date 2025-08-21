@@ -26,7 +26,7 @@ const pathname = usePathname();
   return (<div
   className={`flex relative
     flex-row uppercase
-    justify-between p-2
+    justify-between pt-2
     bg-stone-700/40 transition-all duration-300 shadow-lg 
     rounded-xl mx-2 sm:mx-6 sm:px-3 cursor-pointer`}
   onClick={handleClick}
