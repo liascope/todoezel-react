@@ -2,11 +2,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-93 sm:max-h-70 pb-15'}) {
+export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-93 sm:max-h-70'}) {
   const [toggleItems, setToggleItems] = useState({});
 
   return (
-    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-scroll w-full sm:pb-24 ${maxHeight}`}>
+    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-scroll w-full sm:pb-24 pb-10 ${maxHeight}`}>
       <AnimatePresence>
         {tasks?.map((task) => (
           <motion.li  

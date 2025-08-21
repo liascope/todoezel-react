@@ -8,12 +8,11 @@ export default function Header(){
      ToDoeZel✏️
      <svg
   onClick={() => setOpen(true)}
-  className="absolute top-2 right-7 sm:right-10 flex items-center justify-center w-[28px] h-[28px] 
-             text-gray-900 hover:text-stone-900/80 transition-colors duration-200"
+  className="absolute top-2 right-7 sm:right-10 flex items-center justify-center w-[28px] h-[28px] stroke-[3] stroke-gray-900 hover:stroke-stone-900/80"
   viewBox="0 0 33 33"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <g stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
+  <g strokeLinecap="round" strokeLinejoin="round" fill="none">
     <circle cx="20" cy="20" r="11" />
     <line x1="20" y1="15" x2="20" y2="15" />
     <line x1="20" y1="19" x2="20" y2="25" />
@@ -22,3 +21,5 @@ export default function Header(){
     </div>
 {open && <ModalContent onClose={() => setOpen(false)} />}</>
 }
+
+

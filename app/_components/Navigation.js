@@ -33,11 +33,9 @@ export default function Navigation() {
           </Link>
         ))}
       </nav>
-      <div className="backdrop-blur-2xl bg-stone-900/60">
-        <p className="my-1 text-xs tracking-wide text-transparent bg-stone-300/80 bg-clip-text shadow-2xl">
-          ToDoeZel App | © 2025 ZAkin. All rights reserved.
+        <p className="my-1 text-xs tracking-wider text-transparent bg-stone-900 bg-clip-text shadow-2xl">
+          ToDoeZel App | © 2025 Liascope. All rights reserved.
         </p>
-      </div>
     </footer>
   )
 }
