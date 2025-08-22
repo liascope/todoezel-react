@@ -33,7 +33,7 @@ export default function Navigation() {
           </Link>
         ))}
       </nav>
-        <p className="my-1 text-xs tracking-wider text-transparent bg-stone-900 bg-clip-text shadow-2xl">
+        <p className="my-1 text-xs tracking-wider opacity-60 text-transparent bg-clip-text [text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5)] opacity-60 bg-[#666666] text-shadow-lg cursor-pointer font-extrabold hover:bg-stone-900">
           ToDoeZel App | © 2025 Liascope. All rights reserved.
         </p>
     </footer>
