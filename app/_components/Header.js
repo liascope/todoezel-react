@@ -12,7 +12,7 @@ export default function Header(){
   viewBox="0 0 33 33"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <g stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
+  <g stroke="darkGray" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
     <circle cx="20" cy="20" r="11" />
     <line x1="20" y1="15" x2="20" y2="15" />
     <line x1="20" y1="19" x2="20" y2="25" />
