@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
   <html lang="en" className="overflow-x-hidden relative overflow-hidden">
   <body
-    className={`${delius.className} antialiased w-full h-full tracking-widest  bg-stone-900/15 text-amber-50/90`}
+    className={`${delius.className} antialiased w-full h-full tracking-widest bg-stone-900 text-amber-50/90`}
   >
     <BackgroundImage/>
     <Header />
