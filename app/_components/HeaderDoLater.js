@@ -35,7 +35,7 @@ export default function HeaderDoLater() {
         <Link href="/saved">
           <div
             className="w-full bg-green-400 hover:bg-blue-400 transition-colors duration-300 ease-in-out
- text-center rounded-md cursor-pointer mb-2 sm:my-9 sm:py-2 py-1 text-sm sm:text-lg "
+ text-center rounded-sm sm:rounded-md cursor-pointer mb-2 sm:my-9 sm:py-2 py-1 text-sm sm:text-lg "
           >
             SHOW SAVED TASKS 🔍
           </div>
@@ -44,7 +44,7 @@ export default function HeaderDoLater() {
 
       <div className="flex flex-row justify-end items-center sm:mx-6">
         <input
-          className="w-full m-1 sm:my-9 p-2 text-sm sm:text-lg text-center border border-green-400 hover:border-amber-400 bg-stone-900/70 rounded-md sm:ml-5"
+          className="w-full m-1 sm:my-9 p-2 text-sm sm:text-lg text-center border border-green-400 hover:border-amber-400 bg-stone-900/70 rounded-sm sm:rounded-md sm:ml-5"
           placeholder="Search Date 🔍📅"
           type="text"
           onFocus={(e) => (e.target.type = 'date')}

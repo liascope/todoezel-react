@@ -72,7 +72,7 @@ export default function ModalContent ({onClose}) {
 
         <h3>Legal Information</h3>
 
-        This app was developed by ZAkin, who holds all rights to its
+        This app was developed by Liascope, who holds all rights to its
         design, functionality, and content. By using the Todoezel App, you are
         granted a non-exclusive, non-transferable license for personal use only.
         Redistribution, sale, or reverse engineering of the app is prohibited
