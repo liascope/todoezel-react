@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link"
 import ToggleList from "./ToggleList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonQuery from "./ButtonQuery";
 import Button from "./Button";
 import { useTodaysTasks } from "../_lib/hooks/context/TodaysProvider";
@@ -10,6 +10,12 @@ export default function HeaderDoLater() {
   const [date, setDate] = useState('')
   const [doLater, setDoLater] = useState([])
   const {savedTasks, setSavedTasks} = useTodaysTasks()
+const [disabled, setDisabled] = useState(true)
+
+useEffect(()=>{
+  if (doLater.length === 0 || date.trim() === '') {setDisabled(true)} else setDisabled(false)
+},[doLater, date])
+
 
   function handleSave(e) {
     e.preventDefault();
@@ -53,7 +59,7 @@ export default function HeaderDoLater() {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <Button onClick={handleSave}><svg filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))" className="w-[19px] h-[19px] sm:w-[28px] sm:h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+        <Button onClick={handleSave} disabledOnDefault={disabled}><svg filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))" className="w-[19px] h-[19px] sm:w-[28px] sm:h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
   <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
      <polyline points="3,3 3,50 48,50 48,15 35,3 3,3"></polyline>
       <polyline points="35,3 35,16 16,16 16,3 29,3 29,7"></polyline>
