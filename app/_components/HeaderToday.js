@@ -28,7 +28,7 @@ const pathname = usePathname();
     flex-row uppercase
     justify-between pt-2
     bg-stone-700/40 transition-all duration-300 shadow-lg 
-    rounded-xl mx-2 sm:mx-6 sm:px-3 cursor-pointer`}
+    rounded-xl mx-2 sm:mx-6 sm:px-3 ${todaysTask?.tasks?.length > 0 ? 'cursor-pointer' : 'cursor-base'}`}
   onClick={handleClick}
 >
     <div className="text-xs sm:text-lg absolute top-2 left-2 sm:top-6 sm:left-6 tracking-tight">TODAY | {today}</div>

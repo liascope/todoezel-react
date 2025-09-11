@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Header(){
   const [open, setOpen] = useState(false)
 
-    return <> <div onClick={() => setOpen(true)}  className="w-full h-18 flex items-center px-4">
+    return <> <div onClick={() => setOpen(true)}  className="w-full h-18 flex items-center px-4 cursor-pointer">
     <div className="relative w-full h-full">
         <Image
           src="/favicon.png"
