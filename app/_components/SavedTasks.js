@@ -8,11 +8,12 @@ function handleDelete(index) {
   const newTasks = savedTasks?.filter((_, i) => i !== index);
   setSavedTasks(newTasks);
 }
+const sortedTasks = savedTasks?.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
 
     return <ul className="list-none mx-1 my-1 sm:mx-8 sm:my-10 text-center">
     {savedTasks?.length > 0 && <h2>Your Saved Tasks or Notes 🗂️</h2>}
   {savedTasks?.length === 0 ? 'No Saved Tasks or Notes 🗂️' : (
-  savedTasks?.map((entry, index) => (
+  sortedTasks?.map((entry, index) => (
     <li
       key={index}
       className="odd:bg-black/30 z-10 even:bg-black/50 text-justify mx-2 sm:mx-16 px-3 sm:px-16 sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between tracking-widest font-medium hover:bg-black/20"
