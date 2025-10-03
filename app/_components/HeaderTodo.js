@@ -10,6 +10,7 @@ import ToggleList from "./ToggleList";
 import useStorage from "../_lib/hooks/useStorage"
 import { doneTasksToDelete } from "../_lib/hooks/config"
 import BinIcon from "./NavIcons/BinIcon";
+import Confirm from "./Confirm";
 
 // reusable Comp for Todo ('/') & Shop ('/shop') - state without date
 export default function HeaderTodo(){
@@ -18,18 +19,20 @@ const todo = pathname=== '/';
 const shop = pathname === '/shop'
 const [todoes, setTodoes] = useStorage(`${todo ? 'todoes' : shop ? 'shopItem' : ''}`, []);
 const [maxReached, setMaxReached] = useState(false)
+ const [confirm, setConfirm] = useState(false)
 
 useEffect(() => {
   const doneTasks = todoes?.filter(t => t.done && !t.delete)?.length
   setMaxReached(doneTasks >= doneTasksToDelete);
 }, [todoes]);
 
-return <>    <div className="max-w-screen sm:px-5 flex flex-row items-center mx-1 sm:mx-6 justify-end  relative">
+
+return <>  {confirm && <Confirm clickYes={()=>{setTodoes((prev) => prev.filter((item) => !item.done)); setConfirm(false)}} clickNo={()=>setConfirm(false)}/>}  <div className="max-w-screen sm:px-5 flex flex-row items-center mx-1 sm:mx-6 justify-end  relative">
   {todo && <Percent arr={todoes}></Percent>}
          
      <div className="w-full flex items-center flex-row"><ButtonQuery tasks={todoes} setTasks={setTodoes} placeholder={todo ? 'Add Todoes / Notes..' : 'Add Shop Items..'}>
               </ButtonQuery>
-<Button onClick={() => { if (window.confirm("Are you sure you want to delete all checked items?")) {setTodoes((prev) => prev.filter((item) => !item.done));}}} 
+<Button onClick={() => setConfirm(true)} 
 disabledOnDefault={!maxReached} textSize="text-xs" > <BinIcon maxReached={maxReached}/>
 </Button> </div>
             </div>
