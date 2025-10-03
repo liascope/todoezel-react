@@ -17,12 +17,12 @@ export default function Navigation() {
   const pathname = usePathname()
 
   const baseStyle =
-    'transition-all duration-300 ease-in-out py-2 px-10 cursor-pointer w-1/3 text-center uppercase bg-green-400'
-  const activeStyle = 'bg-gradient-to-r from-green-400 via-blue-400 to-green-400'
+    'transition-all duration-300 py-1 ease-in-out px-10 cursor-pointer w-1/3 text-center uppercase bg-emerald-400'
+  const activeStyle = 'bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-400'
 
   return (
     <footer className="flex flex-col fixed bottom-0 left-0 w-full text-center">
-      <nav className="flex justify-evenly shadow-[-0_2px_5px_rgba(0,0,0,0.1)] z-10 bg-green-400 transition-colors duration-300 ease-in-out">
+      <nav className="flex justify-evenly z-10  bg-emerald-400 transition-colors duration-300 ease-in-out">
         {links.map(({ href, Icon, alt }) => (
           <Link
             key={href}
@@ -33,7 +33,7 @@ export default function Navigation() {
           </Link>
         ))}
       </nav>
-        <p className="my-1 text-xs tracking-wider opacity-60 text-transparent bg-clip-text [text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5)] opacity-60 bg-[#666666] text-shadow-lg cursor-pointer font-extrabold hover:bg-stone-900">
+        <p className="my-1 text-xs tracking-wider text-stone-800/60 text-shadow-lg cursor-pointer font-extrabold hover:bg-stone-900">
           ToDoeZel App | © 2025 Liascope. All rights reserved.
         </p>
     </footer>

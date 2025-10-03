@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     <Header />
     <TodaysProvider>
       <HeaderToday />
-    <main className="uppercase sm:m-7 m-2 rounded-xl py-2 sm:py-7 bg-stone-700/40 max-h-screen text-center">
+    <main className="uppercase sm:m-7 m-2 rounded-xl shadow-lg shadow-stone-600 py-2 sm:py-7 bg-stone-700/25 max-h-screen text-center">
         {children}
       </main>
  

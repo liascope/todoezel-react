@@ -12,8 +12,9 @@ export default function Header(){
           src="/favicon.png"
           alt="Logo"
           fill
-          style={{ objectFit: "contain" }}
+         
           priority 
+          className="object-contain saturate-150 hue-rotate-25"
         />
       </div>
     </div>

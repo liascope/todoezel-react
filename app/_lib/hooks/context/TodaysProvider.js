@@ -2,11 +2,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import {todayISO} from "../config"
 import useStorage from "../useStorage";
-import { useRouter } from "next/navigation";
+
 const TodaysContext = createContext();
 
 export function TodaysProvider({ children }) {
-  const router = useRouter();
+
     const [savedTasks, setSavedTasks] = useStorage('savedTasks', [])
     const [todaysTask, setTodaysTask] =useState({})
     const [firstTask, setFirstTask] = useState('..search for Todays Tasks🔍..')

@@ -10,7 +10,7 @@ export function BackgroundImage() {
   priority
   placeholder="blur"
   blurDataURL="/todoezelbg.jpg"
-  className="object-cover object-center"
+  className="object-cover object-center invert-20"
 />
     </div>
   );

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ButtonQuery from "./ButtonQuery";
 import Button from "./Button";
 import { useTodaysTasks } from "../_lib/hooks/context/TodaysProvider";
+import SaveIcon from "./NavIcons/SaveIcon";
 
 export default function HeaderDoLater() {
   const [date, setDate] = useState('')
@@ -40,7 +41,7 @@ useEffect(()=>{
       <div className=" h-fit sm:mx-36 mx-0 px-11">
         <Link href="/saved">
           <div
-            className="w-full bg-green-400 hover:bg-blue-400 transition-colors duration-300 ease-in-out
+            className="w-full bg-emerald-400  hover:bg-sky-400 transition-colors  shadow-2xl duration-300 ease-in-out 
  text-center rounded-sm sm:rounded-md cursor-pointer mb-2 sm:my-9 sm:py-2 py-1 text-sm sm:text-lg "
           >
             SHOW SAVED TASKS 🔍
@@ -50,7 +51,7 @@ useEffect(()=>{
 
       <div className="flex flex-row justify-end items-center sm:mx-6">
         <input
-          className="w-full m-1 sm:my-9 p-2 text-sm sm:text-lg text-center border border-green-400 hover:border-amber-400 bg-stone-900/70 rounded-sm sm:rounded-md sm:ml-5"
+          className="w-full m-1 sm:my-9 p-2 text-sm sm:text-lg text-center border border-emerald-400 hover:border-amber-400 bg-stone-900/70 rounded-sm sm:rounded-md sm:ml-5"
           placeholder="Search Date 🔍📅"
           type="text"
           onFocus={(e) => (e.target.type = 'date')}
@@ -59,16 +60,8 @@ useEffect(()=>{
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <Button onClick={handleSave} disabledOnDefault={disabled}><svg filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))" className="w-[19px] h-[19px] sm:w-[28px] sm:h-[28px]"  viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-  <g stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none">
-     <polyline points="3,3 3,50 48,50 48,15 35,3 3,3"></polyline>
-      <polyline points="35,3 35,16 16,16 16,3 29,3 29,7"></polyline>
-      <polyline points="10,50 10,30 40,30 40,50"></polyline>
-       <line x1="16" y1="45" x2="34" y2="45"/>
-         <line x1="16" y1="40" x2="34" y2="40"/>
-          <line x1="16" y1="35" x2="34" y2="35"/>
-  </g>
-</svg> </Button>
+        <Button onClick={handleSave} disabledOnDefault={disabled}> <SaveIcon/>
+ </Button>
       </div>
 
       <div className="flex flex-col text-center">

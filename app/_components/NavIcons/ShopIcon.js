@@ -1,7 +1,7 @@
 export default function ShopIcon({ className }) {
   return (
     <svg
-      viewBox="0 0 69 69"
+      viewBox="0 0 77 77"
       xmlns="http://www.w3.org/2000/svg"
       className={className} filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))"
     >

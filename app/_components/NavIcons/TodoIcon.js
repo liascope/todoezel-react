@@ -1,7 +1,7 @@
 export default function TodoIcon({ className }) {
   return (
     <svg
-      viewBox="0 0 70 70"
+      viewBox="0 0 85 85"
       xmlns="http://www.w3.org/2000/svg"
       className={className} filter="drop-shadow(2px 2px 2px rgba(0,0,0,0.5))"
     >

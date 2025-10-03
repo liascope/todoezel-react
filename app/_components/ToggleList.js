@@ -6,7 +6,7 @@ export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, m
   const [toggleItems, setToggleItems] = useState({});
 
   return (
-    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-scroll w-full sm:pb-24 pb-10 ${maxHeight}`}>
+    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-auto w-full sm:pb-24 pb-10 ${maxHeight}`}>
       <AnimatePresence>
         {tasks?.map((task) => (
           <motion.li  
