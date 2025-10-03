@@ -2,10 +2,10 @@
 export default function ModalContent ({onClose}) {
 
   return <div className="min-w-screen min-h-screen absolute z-50 top-0 right-0 flex flex-col items-center justify-start bg-[#00000080] backdrop-blur-xl">
-  <div className="relative w-[80vw] h-[70vh] overflow-y-scroll flex flex-col items-center justify-around border-blue-400 border-2 rounded-2xl my-20
+  <div className="relative w-[80vw] h-[70vh] overflow-y-scroll flex flex-col items-center justify-around border-sky-400 border-2 rounded-2xl my-20
   "role="dialog"
       aria-modal="true" >
-    <div className="sticky top-0 w-full flex flex-row justify-between items-center py-3 px-7 rounded-b-lg bg-green-400/90 backdrop-blur-3xl">
+    <div className="sticky top-0 w-full flex flex-row justify-between items-center py-3 px-7 rounded-b-lg bg-emerald-400/90 backdrop-blur-3xl">
       <h2 className="tracking-widest text-2xl sm:text-3xl py-2 rounded-r-2xl">Todoezel-App</h2>
       <button 
         onClick={onClose} 

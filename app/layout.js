@@ -17,9 +17,9 @@ export const metadata = {
   title: " ToDoeZel✏️",
   description: "Notes and Tasks Manager App", 
   icons: {
-    icon: "/favicon.png",    
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/logo.png",    
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
